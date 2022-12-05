@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class BuildCreationTest {
 	
-	@Test
+	@Test(groups = "smoke")
 	public void create()
 	{
 		System.out.println("build creation");

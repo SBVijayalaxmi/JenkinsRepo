@@ -65,6 +65,9 @@
 
   </dependencies>
   
+   <profiles>
+  <profile>
+  <id>smoke</id>
 <build>
 <pluginManagement>
 
@@ -75,7 +78,18 @@
         <version>3.0.0-M7</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testngBatch</suiteXmlFile>
+            <suiteXmlFile>smoke</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>Regression</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -84,4 +98,6 @@
 
 </pluginManagement>
 </build>
+  </profile>
+   </profiles>
 </project>

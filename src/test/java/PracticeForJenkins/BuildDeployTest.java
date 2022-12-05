@@ -10,7 +10,7 @@ public class BuildDeployTest {
 		System.out.println("script-1");
 	}
 	
-	@Test
+	@Test(groups = "regression")
 	public void sample2()
 	{
 		System.out.println("script-2");
